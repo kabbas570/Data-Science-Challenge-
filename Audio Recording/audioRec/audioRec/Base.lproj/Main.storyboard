@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="audioRec" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrg-sh-qg9">
+                                <rect key="frame" x="30" y="114" width="354" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="dKz-LL-Rak"/>
+                                </constraints>
+                                <state key="normal" title="Start Recording"/>
+                                <connections>
+                                    <action selector="record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i7E-FX-Zgx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeE-Zl-5bb">
+                                <rect key="frame" x="30" y="218" width="354" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="hgD-KU-mx9"/>
+                                </constraints>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2r-lw-COi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0P3-gQ-PSW">
+                                <rect key="frame" x="30" y="318" width="354" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="iv2-be-svB"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SfE-8O-1E9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRj-IP-Ylk">
+                                <rect key="frame" x="30" y="418" width="354" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Nal-Ty-V4p"/>
+                                </constraints>
+                                <state key="normal" title="Trim"/>
+                                <connections>
+                                    <action selector="trimBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEN-tF-vTd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zrg-sh-qg9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="3Pn-JX-mqV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zrg-sh-qg9" secondAttribute="trailing" constant="30" id="DID-bB-yTs"/>
+                            <constraint firstItem="Zrg-sh-qg9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="HYB-M6-WdG"/>
+                            <constraint firstItem="bRj-IP-Ylk" firstAttribute="top" secondItem="0P3-gQ-PSW" secondAttribute="bottom" constant="30" id="Mtp-UJ-cJY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bRj-IP-Ylk" secondAttribute="trailing" constant="30" id="Tax-04-JgF"/>
+                            <constraint firstItem="0P3-gQ-PSW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="W2Y-2y-GcB"/>
+                            <constraint firstItem="bRj-IP-Ylk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="amd-pG-g9A"/>
+                            <constraint firstItem="CeE-Zl-5bb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="c4F-Ec-81B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0P3-gQ-PSW" secondAttribute="trailing" constant="30" id="cgp-xb-0BS"/>
+                            <constraint firstItem="0P3-gQ-PSW" firstAttribute="top" secondItem="CeE-Zl-5bb" secondAttribute="bottom" constant="30" id="dyg-Lu-uzm"/>
+                            <constraint firstItem="CeE-Zl-5bb" firstAttribute="top" secondItem="Zrg-sh-qg9" secondAttribute="bottom" constant="30" id="sum-Yl-ob1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CeE-Zl-5bb" secondAttribute="trailing" constant="30" id="t3N-DZ-CQl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonLable" destination="Zrg-sh-qg9" id="rJB-3Z-NFt"/>
+                        <outlet property="playBtn" destination="0P3-gQ-PSW" id="jmx-qw-OIp"/>
+                        <outlet property="stopRecordingBtn" destination="CeE-Zl-5bb" id="rFE-Ad-Tnw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.623188405797109" y="76.339285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
